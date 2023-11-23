@@ -26,7 +26,7 @@ if (driverLength > navigatorLength) {
 
 const driverNameCapital = hacker1.toUpperCase();
 let driverNameSpace = "";
-for (let i=0; i< driverNameCapital.length; i++) {
+for (let i=0; i < hacker1.length; i++) {
   driverNameSpace += driverNameCapital[i] + " ";
 }
 
@@ -46,7 +46,7 @@ if (hacker1.localeCompare(hacker2) < 0) {
   console.log("The driver's name goes first.");
 } else if (hacker1.localeCompare(hacker2) > 0) {
   console.log("Yo, the navigator goes first, definitely.");
-} else if (hacker1.localeCompare(hacker2) = 0) {
+} else if (hacker1.localeCompare(hacker2) == 0) {
   console.log("What?! You both have the same name?");
 }
 
@@ -54,8 +54,8 @@ if (hacker1.localeCompare(hacker2) < 0) {
 let alphabet = "abcdefghijklmnopqrstuvwxyz";
 let letterToNumber = {};
 
-for(let i = 0; i < alphabet.length; i++) {
-    letterToNumber[alphabet[i]] = i + 1;
+for(let i=0; i < alphabet.length; i++) {
+    letterToNumber.alphabet[i] = i + 1;
 }
 
 let shortestName = findShortestName(hacker1, hacker2, driverLength, navigatorLength);
@@ -66,7 +66,7 @@ let arrayLetters = Object.keys(letterToNumber);
 let arrayNumbers = Object.values(letterToNumber);
 hacker1 = hacker1.toLowerCase();
 hacker2 = hacker2.toLowerCase();
-let i = 0;
+let i=0;
 while (i < shortestName.length) { 
   for (let j=0; j< arrayLetters.length; j++){ // 
     if (hacker1[i] === arrayLetters[j]) {
